@@ -1,5 +1,5 @@
 // URL of PDF document
-var url = "http://mozilla.github.io/pdf.js/examples/learning/helloworld.pdf";
+var url = "helloworld.pdf";
 
 // Asynchronous download PDF
 PDFJS.getDocument(url)
