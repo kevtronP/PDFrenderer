@@ -1,7 +1,13 @@
 var doc = new jsPDF();
 
 doc.text("Hello world!", 10, 10);
-doc.save("a4.pdf");
+var string = doc.output("datauristring");
+var iframe =
+  "<iframe width='100%' height='100%' src='" + string + "'></iframe>";
+var x = window.open();
+x.document.open();
+x.document.write(iframe);
+x.document.close();
 
 // // URL of PDF document
 // var url = "test.html";
