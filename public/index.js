@@ -1,6 +1,10 @@
 var doc = new jsPDF();
 
-doc.text("Hello world!", 10, 10);
+var name = "Dan Ingenthron";
+var job = "PDF Renderer";
+
+doc.text(name, 10, 10);
+doc.text(job, 20, 20);
 var string = doc.output("datauristring");
 var iframe =
   "<iframe width='100%' height='100%' src='" + string + "'></iframe>";
