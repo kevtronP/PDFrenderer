@@ -1,34 +1,39 @@
-// URL of PDF document
-var url = "test.html";
+var doc = new jsPDF();
 
-// Asynchronous download PDF
-PDFJS.getDocument(url)
-  .then(function(pdf) {
-    return pdf.getPage(1);
-  })
-  .then(function(page) {
-    // Set scale (zoom) level
-    var scale = 1.5;
+doc.text("Hello world!", 10, 10);
+doc.save("a4.pdf");
 
-    // Get viewport (dimensions)
-    var viewport = page.getViewport(scale);
+// // URL of PDF document
+// var url = "test.html";
 
-    // Get canvas#the-canvas
-    var canvas = document.getElementById("the-canvas");
+// // Asynchronous download PDF
+// PDFJS.getDocument(url)
+//   .then(function(pdf) {
+//     return pdf.getPage(1);
+//   })
+//   .then(function(page) {
+//     // Set scale (zoom) level
+//     var scale = 1.5;
 
-    // Fetch canvas' 2d context
-    var context = canvas.getContext("2d");
+//     // Get viewport (dimensions)
+//     var viewport = page.getViewport(scale);
 
-    // Set dimensions to Canvas
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
+//     // Get canvas#the-canvas
+//     var canvas = document.getElementById("the-canvas");
 
-    // Prepare object needed by render method
-    var renderContext = {
-      canvasContext: context,
-      viewport: viewport
-    };
+//     // Fetch canvas' 2d context
+//     var context = canvas.getContext("2d");
 
-    // Render PDF page
-    page.render(renderContext);
-  });
+//     // Set dimensions to Canvas
+//     canvas.height = viewport.height;
+//     canvas.width = viewport.width;
+
+//     // Prepare object needed by render method
+//     var renderContext = {
+//       canvasContext: context,
+//       viewport: viewport
+//     };
+
+//     // Render PDF page
+//     page.render(renderContext);
+//   });
