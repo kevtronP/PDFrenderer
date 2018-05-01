@@ -1,5 +1,5 @@
 // URL of PDF document
-var url = "helloworld.pdf";
+var url = "networking-zine.pdf";
 
 // Asynchronous download PDF
 PDFJS.getDocument(url)
