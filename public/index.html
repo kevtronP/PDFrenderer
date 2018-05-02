@@ -7,6 +7,19 @@
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.js"></script>
   <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+  <script>
+    //Global Variable Declaration
+    var base64Img = null;
+    var margins = {
+      top: 70,
+      bottom: 40,
+      left: 30,
+      width: 550
+    };
+
+    /* append other function below: */
+
+    </script>
   <script src="index.js" defer></script>
 </head>
 <body>
@@ -21,7 +34,7 @@
 <template id="home-page">
   <div class="vue-component">
 
-  <button v-onclick="generate()">Generate PDF</button>
+  <button v-on:click="generate()">Generate PDF</button>
 
   <div id="html-2-pdfwrapper">
 
