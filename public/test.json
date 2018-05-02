@@ -1,0 +1,18 @@
+{
+  "student": [
+    {
+      "first_name": "Jay",
+      "last_name": "Kasturi",
+      "email": "doitwithdesign@gmail.com",
+      "phone_number": "704-236-5432",
+      "bio":
+        "caffeine-powered taco processor, lead designer, jr developer, artist, start-up all-hatter",
+      "linkedin_url": "https://www.linkedin.com/in/jaykasturi/",
+      "twitter_handle": "doitjay",
+      "personal_url": "https://doitwithdesign.com",
+      "resume_url": "",
+      "github_url": "https://github.com/doitwithdesign",
+      "photo": ""
+    }
+  ]
+}
