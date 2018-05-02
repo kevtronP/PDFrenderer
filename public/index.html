@@ -42,20 +42,26 @@
     <p>Email: {{ student.email }}   Phone Number: {{ student.phone_number }}</p>
     <p>{{ student.bio }}</p>
 
-    <h2 v-for="education in education">Education</h2>
+    <h2>Education</h2>
+    <div  v-for="education in education">
     <p>{{ education.university_name }} </p>
     <p>{{ education.start_date }} - {{ education.end_date }}</p>
     <p>{{ education.degree }} </p>
     <p>{{ education.details }}</p>
+    </div>
 
-    <h2 v-for="experience in experience">Experience</h2>
+    <h2>Experience</h2>
+    <div v-for="experience in experience">
     <p>{{ experience.company }}</p>
     <p>{{ experience.start_date }} - {{ experience.end_date }}</p>
     <p>{{ experience.job_title }}</p>
     <p>{{ experience.details }} </p>
+    </div>
 
-    <h2 v-for="skill in skill">Skills</h2>
+    <h2>Skills</h2>
+    <div v-for="skill in skill">
     <p>{{ skill.skill }}</p>
+    <div>
 
   </div>
 
