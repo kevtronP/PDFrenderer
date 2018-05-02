@@ -1,5 +1,5 @@
-/* global Vue, VueRouter, axios, generate, margin, jsPDF */
-
+/* global Vue, VueRouter, axios, generate, margins, jsPDF */
+console.log("MARGINS", margins);
 var HomePage = {
   template: "#home-page",
   data: function() {
@@ -54,16 +54,16 @@ var HomePage = {
       pdf.setFontSize(18);
       pdf.fromHTML(
         document.getElementById("html-2-pdfwrapper"),
-        this.margins.left, // x coord
-        this.margins.top,
+        margins.left, // x coord
+        margins.top,
         {
           // y coord
-          width: this.margins.width // max width of content on PDF
+          width: margins.width // max width of content on PDF
         },
         function(dispose) {
           this.headerFooterFormatting(pdf);
-        },
-        this.margins
+        }.bind(this),
+        margins
       );
 
       var iframe = document.createElement("iframe");
@@ -74,7 +74,7 @@ var HomePage = {
       document.body.appendChild(iframe);
 
       iframe.src = pdf.output("datauristring");
-    }.bind(this),
+    },
     headerFooterFormatting: function(doc) {
       var totalPages = doc.internal.getNumberOfPages();
 
@@ -86,21 +86,21 @@ var HomePage = {
 
         this.footer(doc, i, totalPages);
       }
-    }.bind(this),
-    footer: function(doc) {}.bind(this),
+    },
+    footer: function(doc) {},
     header: function(doc) {
       doc.setFontSize(30);
       doc.setTextColor(40);
       doc.setFontStyle("normal");
 
       if (this.base64Img) {
-        doc.addImage(this.base64Img, "JPEG", this.margins.left, 10, 40, 40);
+        doc.addImage(this.base64Img, "JPEG", margins.left, 10, 40, 40);
       }
 
-      doc.text("Report Header Template", this.margins.left + 50, 40);
+      doc.text("Report Header Template", margins.left + 50, 40);
 
-      doc.line(3, 70, this.margins.width + 43, 70); // horizontal line
-    }.bind(this)
+      doc.line(3, 70, margins.width + 43, 70); // horizontal line
+    }
   },
   computed: {}
 };
