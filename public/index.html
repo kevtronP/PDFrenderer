@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>PDF.js Learning</title>
-  </head>
-  <body>
-    <canvas id="the-canvas"></canvas>
-    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test resume</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+  <div id="vue-app">
+
+    <router-view></router-view>
+
+  </div>
+</body>
 </html>
+
+<template id="home-page">
+  <div class="vue-component">
+
+  <button v-onclick="generate()">Generate PDF</button>
+
+  <div id="html-2-pdfwrapper">
+
+    <h1>{{ student.first_name }} {{ student.last_name }}'s Beautiful Resume</h1>
+    <p>Email: {{ student.email }}   Phone Number: {{ student.phone_number }}</p>
+    <p>{{ student.bio }}</p>
+
+    <h2 v-for="education in education">Education</h2>
+    <p>{{ education.university_name }} </p>
+    <p>{{ education.start_date }} - {{ education.end_date }}</p>
+    <p>{{ education.degree }} </p>
+    <p>{{ education.details }}</p>
+
+    <h2 v-for="experience in experience">Experience</h2>
+    <p>{{ experience.company }}</p>
+    <p>{{ experience.start_date }} - {{ experience.end_date }}</p>
+    <p>{{ experience.job_title }}</p>
+    <p>{{ experience.details }} </p>
+
+    <h2 v-for="skill in skill">Skills</h2>
+    <p>{{ skill.skill }}</p>
+
+  </div>
+
+
+  </div>
+</template>
