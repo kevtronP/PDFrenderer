@@ -17,20 +17,24 @@ var HomePage = {
         github_url: "",
         photo: ""
       },
-      education: {
-        start_date: "",
-        end_date: "",
-        degree: "",
-        university_name: "",
-        details: ""
-      },
-      experience: {
-        start_date: "",
-        end_date: "",
-        job_title: "",
-        company: "",
-        details: ""
-      },
+      education: [
+        {
+          start_date: "",
+          end_date: "",
+          degree: "",
+          university_name: "",
+          details: ""
+        }
+      ],
+      experience: [
+        {
+          start_date: "",
+          end_date: "",
+          job_title: "",
+          company: "",
+          details: ""
+        }
+      ],
       skill: {
         skill: ""
       }
