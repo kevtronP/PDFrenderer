@@ -12,7 +12,17 @@
       "personal_url": "https://doitwithdesign.com",
       "resume_url": "",
       "github_url": "https://github.com/doitwithdesign",
-      "photo": ""
+      "photo": "",
+      "education_start_date": "01/28/18",
+      "education_end_date": "05/17/18",
+      "degree": "Actualize Certification",
+      "university_name": "University of Texas at Austin",
+      "education_details": "BA History and Linguistics",
+      "experience_start_date": "04/01/08",
+      "experience_end_date": "",
+      "job_title": "Lead UX Designer",
+      "company": "PSC Group, LLC",
+      "experience_details": "school of hard knocks"
     }
   ]
 }
