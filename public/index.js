@@ -96,8 +96,8 @@ var HomePage = {
       doc.text("Report Header Template", this.margins.left + 50, 40);
 
       doc.line(3, 70, this.margins.width + 43, 70); // horizontal line
-    }
-  }.bind(this),
+    }.bind(this)
+  },
   computed: {}
 };
 
