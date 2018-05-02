@@ -4,27 +4,36 @@ var HomePage = {
   template: "#home-page",
   data: function() {
     return {
-      first_name: "",
-      last_name: "",
-      email: "",
-      phone_number: "",
-      bio: "",
-      linkedin_url: "",
-      twitter_handle: "",
-      personal_url: "",
-      resume_url: "",
-      github_url: "",
-      photo: "",
-      education_start_date: "",
-      education_end_date: "",
-      degree: "",
-      university_name: "",
-      education_details: "",
-      experience_start_date: "",
-      experience_end_date: "",
-      job_title: "",
-      company: "",
-      experience_details: "",
+      student: {
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone_number: "",
+        bio: "",
+        linkedin_url: "",
+        twitter_handle: "",
+        personal_url: "",
+        resume_url: "",
+        github_url: "",
+        photo: ""
+      },
+      education: {
+        start_date: "",
+        end_date: "",
+        degree: "",
+        university_name: "",
+        details: ""
+      },
+      experience: {
+        start_date: "",
+        end_date: "",
+        job_title: "",
+        company: "",
+        details: ""
+      },
+      skill: {
+        skill: ""
+      },
       base64Img: null,
       margins: {
         top: 70,
