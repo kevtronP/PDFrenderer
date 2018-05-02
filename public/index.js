@@ -33,14 +33,14 @@ var HomePage = {
       },
       skill: {
         skill: ""
-      },
-      base64Img: null,
-      margins: {
-        top: 70,
-        bottom: 40,
-        left: 30,
-        width: 550
       }
+      // base64Img: null
+      // margins: {
+      //   top: 70,
+      //   bottom: 40,
+      //   left: 30,
+      //   width: 550
+      // }
     };
   },
   created: function() {},
